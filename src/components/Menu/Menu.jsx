@@ -10,7 +10,7 @@ const Menu = ({ setMenuToggle }) => {
           </button>
         </div>
 
-        <div className="absolute top-28 right-72 text-center ">
+        <div className="absolute top-28 right-72 text-center xs:right-32 ">
           <ul className="text-white uppercase space-y-3 text-lg	 font-medium ">
             <li>About</li>
             <li>Services</li>

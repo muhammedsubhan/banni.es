@@ -4,6 +4,7 @@ import { images } from "./image";
 import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 import SearchInput from "../SearchInput/SearchInput";
+import MainSec from "../Main/MainSec";
 
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);
@@ -50,11 +51,14 @@ const Home = () => {
             <SearchInput setSearchToggle={setSearchToggle} />
           </div>
         )}
-        <div className="flex justify-between items-center py-10 uppercase px-5">
+        <div className="flex justify-around items-center py-10 uppercase px-5">
           <div className="space-y-8">
             <div className="flex gap-2">
-              <p className="text-white font-medium text-base">Contact |</p>
-              <p className="text-white font-medium text-base">Blog</p>
+              <p className="text-white font-medium text-sm ">
+                Contact
+                <span className="text-white ml-3">|</span>
+              </p>
+              <p className="text-white font-medium text-sm ml-2">Blog</p>
             </div>
             <div className="hidden md:flex">
               <Logo />
@@ -63,7 +67,7 @@ const Home = () => {
           <div className="flex md:hidden">
             <Logo />
           </div>
-          <div className="flex gap-1 text-white font-medium text-base md:mb-[90px]">
+          <div className="flex gap-3 text-white font-medium text-sm md:mb-[90px]">
             <p>
               ES <span className="text-white">|</span>
             </p>
@@ -100,6 +104,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <MainSec/>
     </>
   );
 };

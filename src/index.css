@@ -13,6 +13,7 @@
 body {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+  /* background: #000; */
 }
 
 /* .backgroundImage {
@@ -37,5 +38,12 @@ body {
 
 .hovercolor {
   color: #00acc8;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  top: 140px;
+  width: 100%;
 }
 

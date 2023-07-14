@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 import SearchInput from "../SearchInput/SearchInput";
 import MainSec from "../Main/MainSec";
+import Category from "../Category/Category";
 
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);
@@ -105,6 +106,7 @@ const Home = () => {
         </div>
       </div>
       <MainSec/>
+      <Category/>
     </>
   );
 };

@@ -6,6 +6,7 @@ import Menu from "../Menu/Menu";
 import SearchInput from "../SearchInput/SearchInput";
 import MainSec from "../Main/MainSec";
 import Category from "../Category/Category";
+import ShowRoom from "../ShowRooms/ShowRoom";
 
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);
@@ -105,8 +106,9 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <MainSec/>
-      <Category/>
+      <MainSec />
+      <Category />
+      <ShowRoom />
     </>
   );
 };

@@ -6,8 +6,7 @@ const MainSec = () => {
       <div className="py-4 px-20 md:px-10 bg-black text-white flex items-center justify-around min-h-full md:flex-col">
         <div className=" w-[440px] md:w-full md:text-start leading-loose">
           <span className=" text-white text-3xl md:text-2xl font-light">
-            Reference showrooms in Spain for quality decoration and interior
-            design projects.
+          BANNI – Market leader showrooms for quality decoration and interior design projects in Spain
           </span>
         </div>
         <div className="md:hidden border-r-2 border-blue-400 h-24"></div>

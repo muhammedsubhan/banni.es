@@ -7,6 +7,7 @@ import SearchInput from "../SearchInput/SearchInput";
 import MainSec from "../Main/MainSec";
 import Category from "../Category/Category";
 import ShowRoom from "../ShowRooms/ShowRoom";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);
@@ -109,6 +110,7 @@ const Home = () => {
       <MainSec />
       <Category />
       <ShowRoom />
+      <Footer />
     </>
   );
 };

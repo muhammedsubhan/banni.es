@@ -17,6 +17,16 @@ module.exports = {
       xs: { max: "475px" },
     },
 
+    colors: {
+      lightBlueColor: "#00abc7",
+      colorWhite: "#fff",
+      colorBlack: "#000000",
+      colorLightBrown: "#BFEFD7",
+      colorGray: "#C2C2C2",
+      colorBackGround: "#080808",
+      colorGrayDark: "#464646",
+    },
+
     extend: {},
   },
   plugins: [],

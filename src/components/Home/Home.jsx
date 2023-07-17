@@ -43,25 +43,30 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative h-screen md:h-[380px]" style={bgImageStyle}>
+      <div
+        className="relative h-screen md:h-[380px] bg-colorBackGround"
+        style={bgImageStyle}
+      >
         {menuToggle && (
-          <div className="bg-opacity bg-black relative">
+          <div className="bg-opacity bg-colorBlack relative">
             <Menu setMenuToggle={setMenuToggle} />
           </div>
         )}
         {searchToggle && (
-          <div className="bg-opacity bg-black relative">
+          <div className="bg-opacity bg-colorBlack relative">
             <SearchInput setSearchToggle={setSearchToggle} />
           </div>
         )}
         <div className="flex justify-around items-center py-10 uppercase px-5">
           <div className="space-y-8">
             <div className="flex gap-2">
-              <p className="text-white font-medium text-sm ">
+              <p className="text-colorWhite hover:text-lightBlueColor hover:underline font-medium text-sm transition duration-100 hover:ease-in">
                 Contact
-                <span className="text-white ml-3">|</span>
+                <span className="text-colorWhite ml-3">|</span>
               </p>
-              <p className="text-white font-medium text-sm ml-2">Blog</p>
+              <p className="text-colorWhite transition duration-100 hover:ease-in hover:text-lightBlueColor hover:underline font-medium text-sm ml-2">
+                Blog
+              </p>
             </div>
             <div className="hidden md:flex">
               <Logo />
@@ -70,20 +75,22 @@ const Home = () => {
           <div className="flex md:hidden">
             <Logo />
           </div>
-          <div className="flex gap-3 text-white font-medium text-sm md:mb-[90px]">
-            <p>
-              ES <span className="text-white">|</span>
+          <div className="flex gap-2 text-white font-medium text-sm md:mb-[90px]">
+            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
+              ES <span className="text-colorWhite">|</span>
             </p>
-            <p>
-              EN <span className="text-white">|</span>
+            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
+              EN <span className="text-colorWhite">|</span>
             </p>
-            <p>DE</p>
+            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
+              DE
+            </p>
           </div>
         </div>
         <div className="md:hidden">
           <HomeLinks handleSearchToggle={handleSearchToggle} />
         </div>
-        <div className="flex justify-center items-end text-center text-white text-3xl">
+        <div className="flex justify-center items-end text-center text-colorWhite text-3xl">
           <i className="fa-solid fa-arrow-down animate-bounce absolute bottom-0"></i>
         </div>
 
@@ -93,7 +100,7 @@ const Home = () => {
               key={index}
               className={`circle ${
                 currentState === index ? "active" : ""
-              } text-white opacity-20 ml-2`}
+              } text-colorWhite opacity-20 ml-2`}
               onClick={() => goToNext(index)}
             >
               <i className="fa-solid fa-circle"></i>
@@ -102,7 +109,10 @@ const Home = () => {
         </div>
 
         <div className="hidden md:flex absolute right-10 top-24">
-          <button className="text-3xl text-white" onClick={menuHandleToggle}>
+          <button
+            className="text-3xl text-colorWhite"
+            onClick={menuHandleToggle}
+          >
             <i className="fa-solid fa-bars"></i>
           </button>
         </div>

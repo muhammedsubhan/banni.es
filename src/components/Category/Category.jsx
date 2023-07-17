@@ -15,10 +15,10 @@ import {
 const Category = () => {
   return (
     <>
-      <div className="py-5 bg-black  text-white flex flex-wrap uppercase">
+      <div className="py-5 bg-colorBackGround  text-white flex flex-wrap uppercase">
         <div className="relative">
           <div className=" text z-20 px-40">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               kitchens
             </h1>
           </div>
@@ -30,7 +30,7 @@ const Category = () => {
         </div>
         <div className="relative">
           <div className=" text z-20 px-40">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               BathRooms
             </h1>
           </div>
@@ -43,7 +43,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-28">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               InDoor Furniture
             </h1>
           </div>
@@ -56,7 +56,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-20">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Closets and Dressing Rooms
             </h1>
           </div>
@@ -69,7 +69,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-40">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Door
             </h1>
           </div>
@@ -82,7 +82,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-28">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               OutDoor Furniture
             </h1>
           </div>
@@ -95,7 +95,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-20">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Accessories and Complements
             </h1>
           </div>
@@ -108,7 +108,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-28">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Floors and Coatings
             </h1>
           </div>
@@ -121,7 +121,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-40">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Lighting
             </h1>
           </div>
@@ -134,7 +134,7 @@ const Category = () => {
 
         <div className="relative">
           <div className=" text z-20 px-40">
-            <h1 className=" hover:border-2  py-2 text-xl text-white font-medium">
+            <h1 className=" hover:border-2  py-2 text-xl text-colorWhite font-medium">
               Office Furniture
             </h1>
           </div>
@@ -147,10 +147,10 @@ const Category = () => {
 
         <div className="relative ">
           <div className=" text z-20">
-            <h1 className="  text-xl text-white font-medium">
+            <h1 className="  text-xl text-colorWhite font-medium">
               Office Furniture
             </h1>
-            <h1 className="  text-xl text-blue-300 font-medium hover:underline mt-1">
+            <h1 className="  text-xl text-lightBlueColor font-medium hover:underline mt-1">
               by Appointment
             </h1>
           </div>

@@ -60,3 +60,37 @@ body {
   background-size: 100% 3px;
   background-position: 0 100%;
 }
+
+.contact-form {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: #202020;
+  color: #fff;
+  padding-left: 8px;
+}
+
+.contact-form::placeholder {
+  color: #757575;
+  font-size: 17px;
+  font-weight: 100;
+  margin-left: 20px;
+}
+
+.contact-textarea {
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: #202020;
+  color: #fff;
+  padding-left: 8px;
+}
+
+.contact-textarea::placeholder {
+  color: #757575;
+  font-size: 17px;
+  font-weight: 100;
+  margin-left: 20px;
+}

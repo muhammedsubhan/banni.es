@@ -126,9 +126,6 @@ const ShowRoom = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center  bg-colorBackGround pt-20">
-        <div className="border-b border-colorGrayDark w-[1200px] xs:w-[300px] "></div>
-      </div>
     </>
   );
 };

@@ -94,3 +94,17 @@ body {
   font-weight: 100;
   margin-left: 20px;
 }
+
+.imagetext {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+.imagecity {
+  position: absolute;
+  top: 52%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+

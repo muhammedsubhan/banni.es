@@ -6,6 +6,7 @@ import Menu from "../Menu/Menu";
 import SearchInput from "../SearchInput/SearchInput";
 import { Link, useLocation } from "react-router-dom";
 import contactImage from "../../Pages/Contact/bgContact.jpg";
+import projectImage from "../../Pages/Projects/projectimage.jpg";
 const Navbar = () => {
   const [currentState, setCurrentState] = useState(0);
   const [menuToggle, setMenuToggle] = useState(false);
@@ -25,6 +26,13 @@ const Navbar = () => {
     location.pathname === "/contact"
       ? {
           backgroundImage: `url(${contactImage})`, // Replace with the URL of the contact page image
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "550px",
+        }
+      : location.pathname === "/projects"
+      ? {
+          backgroundImage: `url(${projectImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           height: "550px",
@@ -103,7 +111,18 @@ const Navbar = () => {
           </div>
         )}
 
+        {location.pathname === "/projects" && (
+          <div className="py-24">
+            <p className="text-colorWhite text-center text-4xl font-light leading-relaxed sm:text-3xl sm:leading-light ">
+              Interior design and high decoration
+              <br /> projects
+            </p>
+          </div>
+        )}
+
         {location.pathname === "/contact" ? (
+          " "
+        ) : location.pathname === "/projects" ? (
           " "
         ) : (
           <div className="flex justify-center items-end text-center text-colorWhite text-3xl">
@@ -111,6 +130,8 @@ const Navbar = () => {
           </div>
         )}
         {location.pathname === "/contact" ? (
+          " "
+        ) : location.pathname === "/projects" ? (
           " "
         ) : (
           <div className="absolute bottom-8 right-14">

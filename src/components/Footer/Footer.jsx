@@ -8,6 +8,9 @@ import footerLogo from "../../img/footer-logo.png";
 const Footer = () => {
   return (
     <>
+      <div className="flex items-center justify-center  bg-colorBackGround pt-20">
+        <div className="border-b border-colorGrayDark w-[1200px] xs:w-[300px] "></div>
+      </div>
       <div className="p-16 bg-colorBackGround ">
         <div className=" flex justify-evenly md:flex-wrap sm:justify-start">
           <div>

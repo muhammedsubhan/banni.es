@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const HomeLinks = ({ handleSearchToggle }) => {
   return (
     <>
@@ -9,7 +9,9 @@ const HomeLinks = ({ handleSearchToggle }) => {
           <p className="link-underline  ">Services</p>
           <p className="link-underline">Products</p>
           <p className="link-underline  ">Our Brands</p>
-          <p className="link-underline">Projects</p>
+          <Link to="/projects">
+            <p className="link-underline">Projects</p>
+          </Link>
           <p className="link-underline  ">OutLet</p>
           <p className="link-underline  ">ShowRoom</p>
           <button onClick={handleSearchToggle}>

@@ -1,10 +1,10 @@
 import React from "react";
 import Home from "./components/Home/Home";
-
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Contact from "./Pages/Contact/Contact";
 import ShowRoom from "./components/ShowRooms/ShowRoom";
+import Projects from "./Pages/Projects/Projects";
 const App = () => {
   return (
     <>
@@ -12,6 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
         <ShowRoom />
         <Footer />

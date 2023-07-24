@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import MainSec from "../Main/MainSec";
 import Category from "../Category/Category";
+import ShowRoom from "../ShowRooms/ShowRoom";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       <Navbar />
       <MainSec />
       <Category />
+      <ShowRoom />
+        <Footer />
     </>
   );
 };

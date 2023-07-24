@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ProjectImages = ({ data }) => {
+const ProjectImages = ({ data, setDetails, setShowDetails }) => {
   const [showText, setShowText] = useState(false);
 
   const handleMouseEnter = () => {
@@ -11,14 +11,20 @@ const ProjectImages = ({ data }) => {
     setShowText(false);
   };
 
+  const dataDetails = () => {
+    setShowDetails(true);
+    setDetails(data);
+  };
+
   return (
     <>
       <div
-        className="text-colorWhite"
+        onClick={dataDetails}
+        className="text-colorWhite relative"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="relative">
+        <div>
           <img
             src={data.image}
             alt={data.title}
@@ -35,6 +41,7 @@ const ProjectImages = ({ data }) => {
             )}
           </div>
         </div>
+      
       </div>
     </>
   );

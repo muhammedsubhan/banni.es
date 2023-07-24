@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ContactForm from "./ContactForm";
+import ShowRoom from "../../components/ShowRooms/ShowRoom";
+import Footer from "../../components/Footer/Footer";
 
 const Contact = () => {
   return (
@@ -26,6 +28,8 @@ const Contact = () => {
         </div>
         <ContactForm />
       </div>
+      <ShowRoom />
+        <Footer />
     </>
   );
 };

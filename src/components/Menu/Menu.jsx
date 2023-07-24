@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Menu = ({ setMenuToggle }) => {
   return (
     <>
@@ -10,13 +10,15 @@ const Menu = ({ setMenuToggle }) => {
           </button>
         </div>
 
-        <div className="absolute top-28 right-72 text-center xs:right-32 ">
+        <div className="absolute z-[999] top-28 right-72 text-center xs:right-32 ">
           <ul className="text-colorWhite uppercase space-y-3 text-lg	 font-medium ">
             <li>About</li>
             <li>Services</li>
             <li>Products</li>
             <li>Our Brands</li>
-            <li>Projects</li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
             <li>OutLet</li>
             <li>ShowRooms</li>
           </ul>

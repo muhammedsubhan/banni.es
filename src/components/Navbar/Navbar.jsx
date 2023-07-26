@@ -7,6 +7,7 @@ import SearchInput from "../SearchInput/SearchInput";
 import { Link, useLocation } from "react-router-dom";
 import contactImage from "../../Pages/Contact/bgContact.jpg";
 import projectImage from "../../Pages/Projects/projectimage.jpg";
+import electronicsImage from "../../Pages/Products/electronics.jpg";
 const Navbar = () => {
   const [currentState, setCurrentState] = useState(0);
   const [menuToggle, setMenuToggle] = useState(false);
@@ -25,12 +26,40 @@ const Navbar = () => {
   const bgImageStyle =
     location.pathname === "/contact"
       ? {
-          backgroundImage: `url(${contactImage})`, // Replace with the URL of the contact page image
+          backgroundImage: `url(${contactImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           height: "550px",
         }
       : location.pathname === "/projects"
+      ? {
+          backgroundImage: `url(${projectImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "550px",
+        }
+      : location.pathname === "/products/electronics"
+      ? {
+          backgroundImage: `url(${electronicsImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "550px",
+        }
+      : location.pathname === "/products/jewelery"
+      ? {
+          backgroundImage: `url(${projectImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "550px",
+        }
+      : location.pathname === "/products/men's%20clothing"
+      ? {
+          backgroundImage: `url(${contactImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "550px",
+        }
+      : location.pathname === "/products/women's%20clothing"
       ? {
           backgroundImage: `url(${projectImage})`,
           backgroundPosition: "center",
@@ -57,7 +86,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="relative h-screen md:h-[380px] bg-colorBackGround "
+        className="relative h-screen md:h-[380px] bg-colorBackGround"
         style={bgImageStyle}
       >
         {menuToggle && (
@@ -120,9 +149,25 @@ const Navbar = () => {
           </div>
         )}
 
+        {location.pathname === "/products/electronics" && (
+          <div className="py-24">
+            <p className="text-colorWhite text-center text-4xl font-light leading-relaxed sm:text-2xl sm:leading-light ">
+              High quality Electronics
+            </p>
+          </div>
+        )}
+
         {location.pathname === "/contact" ? (
           " "
         ) : location.pathname === "/projects" ? (
+          " "
+        ) : location.pathname === "/products/electronics" ? (
+          " "
+        ) : location.pathname === "/products/jewelery" ? (
+          " "
+        ) : location.pathname === "/products/men's%20clothing" ? (
+          " "
+        ) : location.pathname === "/products/women's%20clothing" ? (
           " "
         ) : (
           <div className="flex justify-center items-end text-center text-colorWhite text-3xl">
@@ -132,6 +177,14 @@ const Navbar = () => {
         {location.pathname === "/contact" ? (
           " "
         ) : location.pathname === "/projects" ? (
+          " "
+        ) : location.pathname === "/products/electronics" ? (
+          " "
+        ) : location.pathname === "/products/jewelery" ? (
+          " "
+        ) : location.pathname === "/products/men's%20clothing" ? (
+          " "
+        ) : location.pathname === "/products/women's%20clothing" ? (
           " "
         ) : (
           <div className="absolute bottom-8 right-14">

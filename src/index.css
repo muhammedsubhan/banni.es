@@ -108,3 +108,19 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.products-link-container:hover div {
+  display: block;
+}
+
+/* Optionally, you can add some styling to the list */
+.products-link-container div {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products-link-container span {
+  display: flex;
+  padding: 8px;
+}

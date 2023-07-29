@@ -4,11 +4,26 @@ import { useProductList } from "../../Context/ProductsContext";
 import ProductImages from "../../components/ProductImages/ProductImages";
 import ShowRoom from "../../components/ShowRooms/ShowRoom";
 import Footer from "../../components/Footer/Footer";
+import { useWishListList } from "../../components/WishListContext/WishListContext";
+import { Link } from "react-router-dom";
 const Products = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
   const { productData } = useProductList();
 
+  const { setWishList, WishList } = useWishListList();
+
+  const isInWishList = WishList.some((item) => item.id === details.id);
+
+  const handleWishList = () => {
+
+    const itemInWishList = WishList.find((item) => item.id === details.id);
+
+ 
+    if (!itemInWishList) {
+      setWishList((prev) => [...prev, details]);
+    }
+  };
   return (
     <>
       <div className="relative">
@@ -71,6 +86,19 @@ const Products = () => {
                 <p className="text-colorWhite text-base font-light">
                   Price : ${details.price}
                 </p>
+                <div className="flex justify-around flex-col mt-5 gap-4">
+                  <button
+                    onClick={handleWishList}
+                    className="text-colorWhite border px-4 py-2 rounded-xl hover:bg-colorWhite hover:text-colorBlack text-sm font-medium transition-all"
+                  >
+                    <Link to={isInWishList ? "/wishlist" : null}>
+                      {isInWishList ? "Go To WishList" : "Add to WishList"}
+                    </Link>
+                  </button>
+                  <button className="text-colorWhite border px-4 py-2 rounded-xl  hover:bg-colorWhite hover:text-colorBlack text-sm font-medium transition-all">
+                    Add To Bag
+                  </button>
+                </div>
               </div>
 
               <button

@@ -6,6 +6,7 @@ import Projects from "./Pages/Projects/Projects";
 import Products from "./Pages/Products/Products";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
+import WishList from "./Pages/WishList/WishList";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/products/:category" element={<Products />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/wishlist" element={<WishList />} />
         </Routes>
       </div>
     </>

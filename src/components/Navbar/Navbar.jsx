@@ -115,16 +115,18 @@ const Navbar = () => {
           <div className="flex md:hidden">
             <Logo />
           </div>
-          <div className="flex gap-2 text-white font-medium text-sm md:mb-[90px]">
-            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
-              ES <span className="text-colorWhite">|</span>
-            </p>
-            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
-              EN <span className="text-colorWhite">|</span>
-            </p>
-            <p className="transition duration-100 hover:ease-in text-colorWhite hover:text-lightBlueColor hover:underline">
-              DE
-            </p>
+          <div className="flex text-white font-medium text-sm gap-2">
+            <Link to="/login">
+              <button className="text-colorWhite border px-4 py-1 rounded-xl ">
+                LogIn
+              </button>
+            </Link>
+
+            <Link to="/signup">
+              <button className="text-colorWhite border px-4 py-1 rounded-xl">
+                SignUp
+              </button>
+            </Link>
           </div>
         </div>
         <div className="md:hidden">

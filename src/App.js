@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Contact from "./Pages/Contact/Contact";
 import Projects from "./Pages/Projects/Projects";
 import Products from "./Pages/Products/Products";
+import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/SignUp/SignUp";
 const App = () => {
   return (
     <>
@@ -13,6 +15,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/products/:category" element={<Products />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </>

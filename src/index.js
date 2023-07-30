@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ProductsContextProvider } from "./Context/ProductsContext";
 import { UserAuthContextProvider } from "./components/FirebaseContext/FirebaseContext";
 import { WishListContextProvider } from "./components/WishListContext/WishListContext";
+import { CartContextProvider } from "./components/CartContext/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
       <ProductsContextProvider>
         <UserAuthContextProvider>
           <WishListContextProvider>
-            <App />
+            <CartContextProvider>
+              <App />
+            </CartContextProvider>
           </WishListContextProvider>
         </UserAuthContextProvider>
       </ProductsContextProvider>

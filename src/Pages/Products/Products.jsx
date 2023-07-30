@@ -6,24 +6,32 @@ import ShowRoom from "../../components/ShowRooms/ShowRoom";
 import Footer from "../../components/Footer/Footer";
 import { useWishListList } from "../../components/WishListContext/WishListContext";
 import { Link } from "react-router-dom";
+import { useCartList } from "../../components/CartContext/CartContext";
 const Products = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
   const { productData } = useProductList();
 
   const { setWishList, WishList } = useWishListList();
+  const { setCartProducts, cartProducts } = useCartList();
 
   const isInWishList = WishList.some((item) => item.id === details.id);
+  const isInCart = cartProducts.some((item) => item.id === details.id);
 
-  const handleWishList = () => {
-
+  const addToWishList = () => {
     const itemInWishList = WishList.find((item) => item.id === details.id);
-
- 
     if (!itemInWishList) {
       setWishList((prev) => [...prev, details]);
     }
   };
+
+  const addToCart = () => {
+    const itemInCart = cartProducts.find((item) => item.id === details.id);
+    if (!itemInCart) {
+      setCartProducts((prev) => [...prev, details]);
+    }
+  };
+
   return (
     <>
       <div className="relative">
@@ -88,15 +96,20 @@ const Products = () => {
                 </p>
                 <div className="flex justify-around flex-col mt-5 gap-4">
                   <button
-                    onClick={handleWishList}
+                    onClick={addToWishList}
                     className="text-colorWhite border px-4 py-2 rounded-xl hover:bg-colorWhite hover:text-colorBlack text-sm font-medium transition-all"
                   >
                     <Link to={isInWishList ? "/wishlist" : null}>
                       {isInWishList ? "Go To WishList" : "Add to WishList"}
                     </Link>
                   </button>
-                  <button className="text-colorWhite border px-4 py-2 rounded-xl  hover:bg-colorWhite hover:text-colorBlack text-sm font-medium transition-all">
-                    Add To Bag
+                  <button
+                    onClick={addToCart}
+                    className="text-colorWhite border px-4 py-2 rounded-xl  hover:bg-colorWhite hover:text-colorBlack text-sm font-medium transition-all"
+                  >
+                    <Link to={isInCart ? "/cart" : null}>
+                      {isInCart ? "Go To Bag" : " Add to Bag"}
+                    </Link>
                   </button>
                 </div>
               </div>

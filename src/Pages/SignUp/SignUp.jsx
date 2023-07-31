@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../components/FirebaseContext/FirebaseContext";
+import Logo from "../../components/Logo/Logo";
 
 const SignUp = () => {
   const [userData, setUserData] = useState({
@@ -39,6 +40,9 @@ const SignUp = () => {
     <>
       <div className="bg- bg-colorBackGround h-screen flex items-center justify-center">
         <div>
+          <div className="mb-10 flex justify-center">
+            <Logo/>
+          </div>
           <form className="flex flex-col gap-4" onSubmit={handleSignUp}>
             <input
               type="text"

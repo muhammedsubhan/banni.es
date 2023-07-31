@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import { useProductList } from "../../Context/ProductsContext";
 import ProductImages from "../../components/ProductImages/ProductImages";
@@ -10,7 +10,9 @@ import { useCartList } from "../../components/CartContext/CartContext";
 const Products = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
-  const { productData } = useProductList();
+  const { productData, setProductData } = useProductList();
+
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const { setWishList, WishList } = useWishListList();
   const { setCartProducts, cartProducts } = useCartList();
@@ -32,6 +34,32 @@ const Products = () => {
     }
   };
 
+  useEffect(() => {
+ 
+    const ProductByCategory = async (cate) => {
+      let apiURL = "https://fakestoreapi.com/products";
+      if (cate !== "all") {
+        apiURL = `https://fakestoreapi.com/products/category/${cate}`;
+      }
+
+      try {
+        const res = await fetch(apiURL);
+        if (!res.ok) {
+          throw new Error("Failed to fetch data from the API.");
+        }
+
+        const data = await res.json();
+        setProductData(data);
+      } catch (error) {
+        console.error(error);
+       
+      }
+    };
+
+    ProductByCategory(selectedCategory);
+  }, [selectedCategory, setProductData]);
+
+
   return (
     <>
       <div className="relative">
@@ -50,7 +78,7 @@ const Products = () => {
                 <div className="border-b-2 border-lightBlueColor w-[60px] "></div>
               </div>
               <h1 className="text-3xl text-colorWhite font-light uppercase">
-                Quality Electronics
+                Quality Products
               </h1>
             </div>
             <div className="text-center py-2">
@@ -58,6 +86,25 @@ const Products = () => {
                 At BANNI we are specialists in quality designer, modern and
                 classic Electronics.
               </small>
+            </div>
+
+            <div className=" mt-4 flex justify-center items-center gap-4">
+              <div className="text-center">
+                <h1 className="text-colorWhite">Category : </h1>
+              </div>
+              <div className="text-center py-2">
+                <select
+                  className="text-black bg-white"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                >
+                  <option value="all">All</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="men's clothing">Men's Clothing</option>
+                  <option value="women's clothing">Women's Clothing</option>
+                  <option value="jewelery">Jewelery</option>
+                </select>
+              </div>
             </div>
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-4 gap-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 py-10">

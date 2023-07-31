@@ -8,6 +8,7 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
 import WishList from "./Pages/WishList/WishList";
 import Cart from "./Pages/Cart/Cart";
+import PrivateRoutes from "./components/PrivateRoutes/PrivateRoutes";
 const App = () => {
   return (
     <>
@@ -16,11 +17,13 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/products/:category" element={<Products />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/wishlist" element={<WishList />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/cart" element={<Cart />} />
+          </Route>
         </Routes>
       </div>
     </>

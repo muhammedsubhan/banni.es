@@ -38,30 +38,9 @@ const Navbar = () => {
           backgroundSize: "cover",
           height: "550px",
         }
-      : location.pathname === "/products/electronics"
+      : location.pathname === "/products"
       ? {
           backgroundImage: `url(${electronicsImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          height: "550px",
-        }
-      : location.pathname === "/products/jewelery"
-      ? {
-          backgroundImage: `url(${projectImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          height: "550px",
-        }
-      : location.pathname === "/products/men's%20clothing"
-      ? {
-          backgroundImage: `url(${contactImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          height: "550px",
-        }
-      : location.pathname === "/products/women's%20clothing"
-      ? {
-          backgroundImage: `url(${projectImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           height: "550px",
@@ -115,7 +94,7 @@ const Navbar = () => {
           <div className="flex md:hidden">
             <Logo />
           </div>
-          <div className="flex text-white font-medium text-sm gap-2">
+          <div className="flex text-white font-medium text-sm gap-2 mb-14">
             <Link to="/login">
               <button className="text-colorWhite border px-4 py-1 rounded-xl ">
                 LogIn
@@ -151,10 +130,10 @@ const Navbar = () => {
           </div>
         )}
 
-        {location.pathname === "/products/electronics" && (
+        {location.pathname === "/products" && (
           <div className="py-24">
             <p className="text-colorWhite text-center text-4xl font-light leading-relaxed sm:text-2xl sm:leading-light ">
-              High quality Electronics
+              High quality Products
             </p>
           </div>
         )}
@@ -163,13 +142,7 @@ const Navbar = () => {
           " "
         ) : location.pathname === "/projects" ? (
           " "
-        ) : location.pathname === "/products/electronics" ? (
-          " "
-        ) : location.pathname === "/products/jewelery" ? (
-          " "
-        ) : location.pathname === "/products/men's%20clothing" ? (
-          " "
-        ) : location.pathname === "/products/women's%20clothing" ? (
+        ) : location.pathname === "/products" ? (
           " "
         ) : (
           <div className="flex justify-center items-end text-center text-colorWhite text-3xl">
@@ -180,13 +153,7 @@ const Navbar = () => {
           " "
         ) : location.pathname === "/projects" ? (
           " "
-        ) : location.pathname === "/products/electronics" ? (
-          " "
-        ) : location.pathname === "/products/jewelery" ? (
-          " "
-        ) : location.pathname === "/products/men's%20clothing" ? (
-          " "
-        ) : location.pathname === "/products/women's%20clothing" ? (
+        ) : location.pathname === "/products" ? (
           " "
         ) : (
           <div className="absolute bottom-8 right-14">

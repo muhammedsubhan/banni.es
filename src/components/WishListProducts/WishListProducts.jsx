@@ -1,12 +1,24 @@
 import React from "react";
 import { useWishListList } from "../WishListContext/WishListContext";
+import { useCartList } from "../CartContext/CartContext";
+import { Link } from "react-router-dom";
 
 const WishListProducts = ({ data }) => {
   const { WishList, setWishList } = useWishListList();
+  const { setCartProducts, cartProducts } = useCartList();
+
+  const isInCart = cartProducts.some((item) => item.id === data.id);
 
   const removeFromWishList = (id) => {
     const filteredWishList = WishList.filter((item) => item.id !== id);
     setWishList(filteredWishList);
+  };
+
+  const addToCart = () => {
+    const itemInCart = cartProducts.find((item) => item.id === data.id);
+    if (!itemInCart) {
+      setCartProducts((prev) => [...prev, data]);
+    }
   };
 
   return (
@@ -40,8 +52,13 @@ const WishListProducts = ({ data }) => {
             >
               Remove WishList
             </button>
-            <button className="border py-1.5 text-sm  sm:text-xs rounded-full px-6 sm:px-2 sm:py-1  hover:bg-colorBlack hover:text-colorWhite transition hover:shadow-md">
-              Add To Bag
+            <button
+              onClick={addToCart}
+              className="border py-1.5 text-sm  sm:text-xs rounded-full px-6  sm:px-2 sm:py-1  hover:bg-colorBlack hover:text-colorWhite transition hover:shadow-md"
+            >
+              <Link to={isInCart ? "/cart" : null}>
+                {isInCart ? "Go To Bag" : " Add to Bag"}
+              </Link>
             </button>
           </div>
         </div>

@@ -8,15 +8,19 @@ const Cart = () => {
 
   return (
     <>
-      <div className="px-10 pt-24 min-h-screen bg-colorBackGround">
+      <div className="px-10 pt-16 min-h-screen bg-colorBackGround">
+        <div className="text-center text-2xl font-semibold text-colorWhite">
+          <h1>Cart</h1>
+        </div>
+
         {cartProducts.length > 0 && (
           <h1 className="text-2xl font-bold p-3 text-colorWhite ">
             Bag({cartProducts.length})
           </h1>
         )}
         {cartProducts.length ? (
-          <div className="flex justify-between gap-5 p-8">
-            <main className="">
+          <div className="flex justify-between gap-5 p-8 lg:flex-col md:p-0">
+            <main className="flex flex-col gap-3">
               {cartProducts.map((item) => (
                 <CartItem key={item.id} product={item} />
               ))}
